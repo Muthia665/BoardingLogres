@@ -7,18 +7,27 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class IntroSliderAdapter (private val introSlides: List<IntroSlide>) : RecyclerView.Adapter<IntroSliderAdapter.IntroSliderViewHolder>() {
+// adapter berfungsi untuk menampilkan item yang di muat ke dalam adapter
+// adapter untuk menghubungkan data dengan view nya
+
+// membuat introslides untuk mengubah data menjadi entuk list
+class IntroSliderAdapter (private val introSlides: List<IntroSlide>)
+    // kalo buat adapter ada codingan ini
+    : RecyclerView.Adapter<IntroSliderAdapter.IntroSliderViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IntroSliderViewHolder {
         return IntroSliderViewHolder(
+            //onCreateViewHolder =
         LayoutInflater.from(parent.context).inflate(R.layout.slide_item,parent, false)
         )
     }
 
     override fun getItemCount(): Int {
+        // buat ngitung si list nya ada berapa
         return introSlides.size
     }
 
     override fun onBindViewHolder(holder: IntroSliderViewHolder, position: Int) {
+        // buat nge set up widget
         holder.bind(introSlides[position])
     }
 

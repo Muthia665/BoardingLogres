@@ -13,7 +13,9 @@ import kotlinx.android.synthetic.main.activity_onboarding_screen.*
 
 class OnboardingScreen : AppCompatActivity() {
 
+    // buat variable untuk memanggil adapter
     private val introSliderAdapter = IntroSliderAdapter(
+        // isi datanya
         listOf(
             IntroSlide("Sunlight",
                 "Sunlight is the light and energy that comes from the sun",
@@ -33,8 +35,13 @@ class OnboardingScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding_screen)
 
+        // panggil adapternya di view pager
         viewPager.adapter = introSliderAdapter
+
+        // menaruh di indicator
         setUpIndicators()
+
+        // menaruh indicator sesuai posisinya
         setCurrentIndicators(0)
 
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {

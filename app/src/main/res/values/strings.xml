@@ -3,5 +3,12 @@
     <string name="skip">SKIP</string>
     <string name="text_title">Text Title</string>
     <string name="text_Description">Text Description</string>
-    <string name="next">Next</string>
+    <string name="next">NEXT</string>
+    <string name="welcome">Welcome To My App</string>
+    <string name="hint_email_login">Hint Email Login</string>
+    <string name="hint_pass_login">Enter Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_account">Don\'t Have Account?</string>
+    <string name="text_register">REGISTER</string>
+    <string name="login">Login</string>
 </resources>
